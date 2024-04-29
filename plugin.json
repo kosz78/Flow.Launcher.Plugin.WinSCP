@@ -1,0 +1,12 @@
+{
+    "ID": "955EF4A86D8C47F088131A92D9D0E9E5",
+    "ActionKeyword": "scp",
+    "Name": "WinSCP",
+    "Description": "Launch WinSCP Sessions",
+    "Author": "Konstantin Zaitcev",
+    "Version": "1.0.0",
+    "Language": "csharp",
+    "Website": "https://github.com/kosz78/Flow.Launcher.Plugin.WinSCP",
+    "IcoPath": "icon.png",
+    "ExecuteFileName": "Flow.Launcher.Plugin.WinSCP.dll"
+}

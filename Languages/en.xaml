@@ -1,0 +1,19 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <!--  Plugin Info  -->
+    <system:String x:Key="flowlauncher_plugin_winscp_plugin_title">WinSCP Session Launcher</system:String>
+    <system:String x:Key="flowlauncher_plugin_winscp_plugin_description">Start your WinSCP Sessions</system:String>
+
+    <!--  Settings  -->
+    <system:String x:Key="flowlauncher_plugin_winscp_settings_winSCPExePath">WinSCP Executable Path</system:String>
+    <system:String x:Key="flowlauncher_plugin_winscp_settings_winSCPOpenExePath">Select WinSCP Executable</system:String>
+
+    <!-- Messages -->
+    <system:String x:Key="flowlauncher_plugin_winscp_pathNotSet">App path not set</system:String>
+    <system:String x:Key="flowlauncher_plugin_winscp_configPlugin">Please configure the WinSCP plugin!</system:String>
+    <system:String x:Key="flowlauncher_plugin_winscp_error">Error</system:String>
+
+</ResourceDictionary>
