@@ -6,10 +6,10 @@ environment:
     DOTNET_CLI_TELEMETRY_OPTOUT: 1
 
 build_script:
-- ps: dotnet publish -c Release -r win-x64 --no-self-contained Flow.Launcher.Plugin.WinSCP/Flow.Launcher.Plugin.WinSCP.csproj
+- ps: dotnet publish -c Release -r win-x64 --no-self-contained Flow.Launcher.Plugin.WinSCP.csproj
 
 after_build:
-- ps: Compress-Archive -Path "Flow.Launcher.Plugin.WinSCP\bin\Release\win-x64\publish\*" -DestinationPath "Flow.Launcher.Plugin.WinSCP.zip"
+- ps: Compress-Archive -Path "bin\Release\win-x64\publish\*" -DestinationPath "Flow.Launcher.Plugin.WinSCP.zip"
 
 artifacts:
     - path: 'Flow.Launcher.Plugin.WinSCP.zip'
