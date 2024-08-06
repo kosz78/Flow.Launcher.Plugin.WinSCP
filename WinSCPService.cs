@@ -144,16 +144,21 @@ namespace Flow.Launcher.Plugin.WinSCP
                         "7" => "s3",
                         _ => "sftp"
                     };
-                    _entries.Add(
-                        new()
-                        {
-                            Identifier = subKey,
-                            Title = HttpUtility.UrlDecode(subKey),
-                            Protocol = protocol,
-                            Username = SessionSubKey.GetValue("UserName").ToString(),
-                            Hostname = SessionSubKey.GetValue("HostName").ToString(),
-                        }
-                    );
+                    SessionEntry entry = new()
+                    {
+                        Identifier = subKey,
+                        Title = HttpUtility.UrlDecode(subKey),
+                        Hostname = SessionSubKey.GetValue("HostName").ToString(),
+                        Protocol = protocol,
+                    };
+
+                    Object username = SessionSubKey.GetValue("UserName");
+                    if (username != null)
+                    {
+                        entry.Username = username.ToString();
+                    }
+
+                    _entries.Add(entry);
                 }
                 catch (Exception)
                 {
