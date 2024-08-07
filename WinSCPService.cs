@@ -138,19 +138,24 @@ namespace Flow.Launcher.Plugin.WinSCP
 
                 try
                 {
-                    string protocol = SessionSubKey.GetValue("FSProtocol").ToString() switch
-                    {
-                        "0" => "scp",
-                        "7" => "s3",
-                        _ => "sftp"
-                    };
                     SessionEntry entry = new()
                     {
                         Identifier = subKey,
                         Title = HttpUtility.UrlDecode(subKey),
                         Hostname = SessionSubKey.GetValue("HostName").ToString(),
-                        Protocol = protocol,
+                        Protocol = "sftp",
                     };
+
+                    Object protocol = SessionSubKey.GetValue("FSProtocol");
+                    if(protocol != null)
+                    {
+                        entry.Protocol = protocol.ToString() switch
+                        {
+                            "0" => "scp",
+                            "7" => "s3",
+                            _ => "sftp"
+                        };
+                    }
 
                     Object username = SessionSubKey.GetValue("UserName");
                     if (username != null)
