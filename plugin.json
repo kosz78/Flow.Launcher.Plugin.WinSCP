@@ -4,7 +4,7 @@
     "Name": "WinSCP",
     "Description": "Launch WinSCP Sessions",
     "Author": "Konstantin Zaitcev",
-    "Version": "1.0.0",
+    "Version": "1.0.1",
     "Language": "csharp",
     "Website": "https://github.com/kosz78/Flow.Launcher.Plugin.WinSCP",
     "IcoPath": "icon.png",
